@@ -22,3 +22,8 @@ void Map::update_data(){
     }
      
 }
+
+void Map::transform()
+{
+    
+}

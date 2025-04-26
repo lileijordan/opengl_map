@@ -61,6 +61,8 @@ public:
         return projection;
     }
 
+    void transform();
+
     void update_data();
 
 private:

@@ -42,20 +42,7 @@ int main()
         while(true)
         {
 
-            mtx.lock();
-
-            if (data_queue->size() > 0)
-            {
-                auto [x, y, z,fs] = data_queue->front();
-
-                data_queue->pop();
-
-                mtx.unlock();
-
-                 
-            }
-
-            mtx.unlock();
+             map.update_data();
  
 
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
