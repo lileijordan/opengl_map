@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(trianglize)
+
+add_library(triangle SHARED
+    earcut_proxy.cpp
+)
+
+target_include_directories(triangle PRIVATE /Users/leili/mapboxgl/earcut.hpp/include/mapbox)

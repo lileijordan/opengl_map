@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(vector-reader)
+
+add_library(vector-reader SHARED
+    vector_tile_reader.cpp geom_handler.cpp
+)
+
+
+target_include_directories(vector-reader PUBLIC /usr/local/include)
+target_include_directories(vector-reader PUBLIC /Users/leili/mapboxgl/vtzero/include)

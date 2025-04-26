@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(geos_util)
+
+add_library(geos_utils SHARED
+    geosutils.cpp
+)
+
+target_include_directories(geos_utils PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../vector-reader)
+target_link_directories(geos_utils PUBLIC /usr/local/lib/)
+
+target_link_libraries(geos_utils PUBLIC libgeos.dylib libgeos_c.dylib)
+
+target_include_directories(geos_utils PUBLIC /usr/local/include)

@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(mapper)
+
+add_library(map SHARED
+   Map.cpp
+)
+
+target_include_directories(map PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../vector-reader)
+
+target_link_libraries(map PUBLIC
+   vector-reader
+)
